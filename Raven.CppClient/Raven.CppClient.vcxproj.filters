@@ -839,6 +839,12 @@
     <ClCompile Include="JsonExtensions.cpp">
       <Filter>ravendb.client\extensions</Filter>
     </ClCompile>
+    <ClCompile Include="UnsupportedOperationException.cpp">
+      <Filter>ravendb.client\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="NotImplementedException.cpp">
+      <Filter>ravendb.client\exceptions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VoidRavenCommand.h">
@@ -2021,6 +2027,12 @@
     </ClInclude>
     <ClInclude Include="JsonExtensions.h">
       <Filter>ravendb.client\extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="UnsupportedOperationException.h">
+      <Filter>ravendb.client\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="NotImplementedException.h">
+      <Filter>ravendb.client\exceptions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
