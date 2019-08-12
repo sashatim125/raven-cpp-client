@@ -112,6 +112,9 @@ namespace ravendb::client::tests::driver
 		}
 
 		auto document_store = get_global_server(secured);
+
+		document_store->maintenance()->server()->send(serverwide::operations::DeleteDatabasesOperation(database_name, true));
+
 		auto database_record = serverwide::DatabaseRecord();
 		database_record.database_name = database_name;
 
