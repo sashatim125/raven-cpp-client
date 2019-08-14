@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "OrderLine.h"
 
-namespace demo
+namespace demo::entities
 {
 	//Using the provided 'ravendb::client::impl::utils::json_utils::set_val_to_json' and
 	//'ravendb::client::impl::utils::json_utils::get_val_from_json' utilities

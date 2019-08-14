@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="entities">
+      <UniqueIdentifier>{3a6bea3e-4bfc-4597-b2ad-ceb4a6024eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{d87d03df-3664-4a53-9d86-d8b063fbc10d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{c0e7215b-67d5-471f-902f-ca822a99ca76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -21,32 +30,50 @@
     <ClInclude Include="DocumentStoreHolder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Company.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="basics.h">
-      <Filter>Header Files</Filter>
+      <Filter>examples</Filter>
     </ClInclude>
     <ClInclude Include="related_documents.h">
-      <Filter>Header Files</Filter>
+      <Filter>examples</Filter>
     </ClInclude>
-    <ClInclude Include="Supplier.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="store_attachment.h">
+      <Filter>examples</Filter>
     </ClInclude>
-    <ClInclude Include="Contact.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="advanced.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+    <ClInclude Include="queries.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>entities</Filter>
     </ClInclude>
     <ClInclude Include="Category.h">
-      <Filter>Header Files</Filter>
+      <Filter>entities</Filter>
     </ClInclude>
-    <ClInclude Include="Product.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Company.h">
+      <Filter>entities</Filter>
     </ClInclude>
-    <ClInclude Include="OrderLine.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Contact.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
+      <Filter>entities</Filter>
     </ClInclude>
     <ClInclude Include="Order.h">
-      <Filter>Header Files</Filter>
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderLine.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Product.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Supplier.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeeDetails.h">
+      <Filter>misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -59,26 +86,50 @@
     <ClCompile Include="DocumentStoreHolder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Company.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Contact.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Supplier.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Address.cpp">
+      <Filter>entities</Filter>
     </ClCompile>
     <ClCompile Include="Category.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>entities</Filter>
     </ClCompile>
-    <ClCompile Include="Product.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Company.cpp">
+      <Filter>entities</Filter>
     </ClCompile>
-    <ClCompile Include="OrderLine.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Contact.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Employee.cpp">
+      <Filter>entities</Filter>
     </ClCompile>
     <ClCompile Include="Order.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderLine.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Supplier.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeDetails.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="advanced.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="basics.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="queries.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="related_documents.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="store_attachment.cpp">
+      <Filter>examples</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

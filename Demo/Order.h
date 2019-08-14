@@ -2,7 +2,7 @@
 #include "raven_cpp_client.h"
 #include "OrderLine.h"
 
-namespace demo
+namespace demo::entities
 {
 	//Each class/struct to be stored in the RavenDb database must be accompanied
 	//with appropriate serializer/deserializer with the specific signature.

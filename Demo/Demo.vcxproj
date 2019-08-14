@@ -154,24 +154,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="advanced.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="Company.h" />
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DocumentStoreHolder.h" />
     <ClInclude Include="basics.h" />
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="EmployeeDetails.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="OrderLine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Product.h" />
+    <ClInclude Include="queries.h" />
     <ClInclude Include="related_documents.h" />
+    <ClInclude Include="store_attachment.h" />
     <ClInclude Include="Supplier.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Address.cpp" />
+    <ClCompile Include="advanced.cpp" />
+    <ClCompile Include="basics.cpp" />
     <ClCompile Include="Category.cpp" />
     <ClCompile Include="Company.cpp" />
     <ClCompile Include="Contact.cpp" />
     <ClCompile Include="Demo.cpp" />
     <ClCompile Include="DocumentStoreHolder.cpp" />
+    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="EmployeeDetails.cpp" />
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="OrderLine.cpp" />
     <ClCompile Include="pch.cpp">
@@ -181,6 +192,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Product.cpp" />
+    <ClCompile Include="queries.cpp" />
+    <ClCompile Include="related_documents.cpp" />
+    <ClCompile Include="store_attachment.cpp" />
     <ClCompile Include="Supplier.cpp" />
   </ItemGroup>
   <ItemGroup>
