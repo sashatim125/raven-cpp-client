@@ -15,6 +15,7 @@
 #include "queries.h"
 #include "related_documents.h"
 #include "store_attachment.h"
+#include "static_indexes.h"
 
 //The 'id' field of the document on most cases should NOT be (de)serialized.
 //Rather the user is encouraged to use the REGISTER_ID_PROPERTY_FOR(TYPE, ID) macro

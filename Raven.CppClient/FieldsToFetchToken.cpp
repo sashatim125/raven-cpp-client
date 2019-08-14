@@ -14,7 +14,7 @@ namespace ravendb::client::documents::session::tokens
 	}
 
 	FieldsToFetchToken::FieldsToFetchToken(std::vector<std::string> fields_to_fetch, std::optional<std::vector<std::string>> projections, bool custom_function, std::optional<std::string> source_alias)
-		: _fields_to_fetch([fields_to_fetch = std::move(fields_to_fetch)]()
+		: _fields_to_fetch([&]()
 	{
 		if (fields_to_fetch.empty())
 		{

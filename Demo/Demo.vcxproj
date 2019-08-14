@@ -158,6 +158,7 @@
     <ClInclude Include="advanced.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="Company.h" />
+    <ClInclude Include="CompanyDetails.h" />
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DocumentStoreHolder.h" />
     <ClInclude Include="basics.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="Product.h" />
     <ClInclude Include="queries.h" />
     <ClInclude Include="related_documents.h" />
+    <ClInclude Include="static_indexes.h" />
     <ClInclude Include="store_attachment.h" />
     <ClInclude Include="Supplier.h" />
   </ItemGroup>
@@ -178,6 +180,7 @@
     <ClCompile Include="basics.cpp" />
     <ClCompile Include="Category.cpp" />
     <ClCompile Include="Company.cpp" />
+    <ClCompile Include="CompanyDetails.cpp" />
     <ClCompile Include="Contact.cpp" />
     <ClCompile Include="Demo.cpp" />
     <ClCompile Include="DocumentStoreHolder.cpp" />

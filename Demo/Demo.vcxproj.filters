@@ -75,6 +75,12 @@
     <ClInclude Include="EmployeeDetails.h">
       <Filter>misc</Filter>
     </ClInclude>
+    <ClInclude Include="CompanyDetails.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="static_indexes.h">
+      <Filter>examples</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -130,6 +136,9 @@
     </ClCompile>
     <ClCompile Include="store_attachment.cpp">
       <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="CompanyDetails.cpp">
+      <Filter>misc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

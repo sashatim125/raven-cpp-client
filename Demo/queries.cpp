@@ -3,6 +3,8 @@
 #include "Employee.h"
 #include "EmployeeDetails.h"
 #include "Company.h"
+#include "CompanyDetails.h"
+#include "Product.h"
 
 namespace demo
 {
@@ -119,5 +121,71 @@ namespace demo
 		auto filteredEmployees = query->to_list();
 
 		return filteredEmployees;
+	}
+
+	auto projectingIndividualFields(std::shared_ptr<ravendb::client::documents::IDocumentStore> store)
+	{
+		auto session = store->open_session();
+
+		auto projectedQuery = session.query<entities::Company>()
+			->select_fields<misc::CompanyDetails>({
+			{ "Name", "Address.City", "Address.Country" },//the document's fields
+			{ "CompanyName", "City", "Country" } });//the projection fields
+
+		auto projectedResults = projectedQuery->to_list();
+
+		return projectedResults;
+	}
+
+	auto projectingUsingFunctions(std::shared_ptr<ravendb::client::documents::IDocumentStore> store)
+	{
+		auto session = store->open_session();
+
+		auto rawQueryString = R"(
+			declare function output(employee) {
+			var formatName = function(employee) { return "Full Name: " + employee.FirstName + " " + employee.LastName; };
+			var formatTitle = function(employee) { return "Title: " + employee.Title };
+			return { FullName: formatName(employee), Title : formatTitle(employee) };
+			}
+			from Employees as employee select output(employee))";
+
+		auto query = session.advanced().raw_query<misc::EmployeeDetails>(rawQueryString);
+
+		auto projectedResults = query->to_list();
+
+		return projectedResults;
+	}
+
+	auto sortingQueryResults(std::shared_ptr<ravendb::client::documents::IDocumentStore> store, uint64_t numberOfUnits)
+	{
+		auto session = store->open_session();
+
+		auto sortedProducts = session.query<entities::Product>()
+			->where_greater_than("UnitsInStock", numberOfUnits)
+			->order_by_descending("UnitsInStock", ravendb::client::documents::session::OrderingType::LONG)
+			->order_by("Name", ravendb::client::documents::session::OrderingType::ALPHA_NUMERIC)
+			->to_list();
+
+		return sortedProducts;
+	}
+
+	auto pagingQueryResults(std::shared_ptr<ravendb::client::documents::IDocumentStore> store,
+		int32_t resultsToSkip,
+		int32_t resultsToTake,
+		std::optional<int32_t>& totalResults)
+	{
+		auto session = store->open_session();
+
+		auto queryStatistics = std::shared_ptr<ravendb::client::documents::session::QueryStatistics>{};
+
+		auto pagedResults = session.query<entities::Company>()
+			->statistics(queryStatistics)
+			->skip(resultsToSkip)
+			->take(resultsToTake)
+			->to_list();
+
+		totalResults.emplace(queryStatistics->total_results);
+
+		return pagedResults;
 	}
 }

@@ -11,8 +11,12 @@ namespace demo::entities
 		std::string Name{};
 		std::string Supplier{};
 		std::string Category{};
+		uint64_t QuantityPerUnit{};
 		double PricePerUnit{};
+		uint64_t UnitsInStock{};
 		uint64_t UnitsOnOrder{};
+		bool Discontinued{};
+		int64_t ReorderLevel{};
 	};
 
 	void to_json(nlohmann::json& j, const Product& p);

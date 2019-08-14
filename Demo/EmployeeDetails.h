@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "raven_cpp_client.h"
-#include "Contact.h"
 
 namespace demo::misc
 {
